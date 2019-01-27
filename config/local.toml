@@ -1,0 +1,23 @@
+host = "ns1.us147.siteground.us"
+port = "18765"
+path = "/discord" 
+password = "+oQQ&.TBBr{["
+db = "" 
+
+
+id = 1008 
+role = "Admin"
+
+clientid = "479727862593880064" 
+client_secret = "3CK5LnfWjYrQ25lJE7jMsTIK2jSmYmGs" 
+token = "NDc5NzI3ODYyNTkzODgwMDY0.Dy-8Fw.HQHAd25-gAN6lMvx8hu8pj_9IVw" 
+
+
+domain = "127.0.0.1"
+protocol = "http"
+port = "3000"
+#public_url = "https://mydomain.com/" 
+
+language = "en"
+# Add "web" to turn on the web server
+enabled = ["ranks", "motd", "wvw_score", "progression", "builds", "wiki", "session", "whois", "li"]

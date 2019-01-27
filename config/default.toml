@@ -1,0 +1,40 @@
+# Copy this file to local.toml to make changes for a version that git will ignore.
+[redis]
+host = "us147.siteground.us"
+port = ""
+path = "" # path to unix socket, use this over host/port if you can.
+password = ""
+db = "" # database number
+
+[world]
+id = "1008" # world member has to be on to get in role, and default world for wvw stuffs.
+role = "" # Name of the role, leave blank if you don't want this
+
+[guild]
+id  = "" # Guild unique ID in format XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX, this can be found at https://api.guildwars2.com/v2/guild/search?name=[guild name]
+key = "" # API Key from top guild rank with the "guilds" permission
+member_role = "" # Name of the role guild members go in
+create_roles = true # Have the bot create roles for each rank.  If false, members will only be assigned to their rank role if it exists.
+motd_channel = "" # Will set the channel description to the guild motd
+motd_convert_urls = true # Convert urls in the guild motd to actual urls that discord parses to a link, if they don't start with e.g. "http://"
+motd_excluded_subdomains = [ # An array of url subdomains of which the url should not be converted (these are regular expressions)
+  "[^\\.]*ts[^\\.]*", # *ts*.example.com
+  "[^\\.]*teamspeak[^\\.]*" # *teamspeak*.example.com
+]
+
+[discord]
+clientid = "479727862593880064" # Used to generate a link to add the bot to a server
+client_secret = "rgObc5wdYponoxk5Qjh8VLRCd0j9sXc8" # Only required if "web" feature is enabled
+token = "NDc5NzI3ODYyNTkzODgwMDY0.Dv73DQ.jbyO8h5YTZve7zsC13Oh7X2NSJc" # Token for your discord bot user
+
+# The "web" feature is disabled by default, enabling it adds a webs server which allows users to login and view more detailed reports and configure some options.
+[web]
+domain = "146.66.99.61"
+protocol = "https"
+port = "3000"
+#public_url = "https://broopa.com/discord/" # Use this for the public url if behind a proxy (such as nginx)
+
+[features]
+language = "en"
+# Add "web" to turn on the web server
+enabled = ["ranks", "motd", "wvw_score", "progression", "builds", "wiki", "session", "whois", "li"]
